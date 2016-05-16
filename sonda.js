@@ -18,7 +18,10 @@
         };
 
         this.mover = function () {
-            this.posicao.mover(this.direcao);
+            var novaPosicao = this.posicao.mover(this.direcao);
+            if(this.planalto.posicaoConhecida(novaPosicao)){
+                this.posicao = novaPosicao;
+            }
         };
     };
 

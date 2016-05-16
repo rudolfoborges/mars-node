@@ -7,8 +7,10 @@
     };
 
     Posicao.prototype.mover = function (direcao) {
-        this.x += direcao.M.x;
-        this.y += direcao.M.y;
+        let x = this.x + direcao.M.x;
+        let y = this.y + direcao.M.y;
+
+        return new Posicao(x, y);
     };
 
     module.exports = Posicao;
