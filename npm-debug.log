@@ -1,0 +1,25 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'init' ]
+2 info using npm@3.8.6
+3 info using node@v6.1.0
+4 verbose stack Error: Cannot find module 'github-url-from-git'
+4 verbose stack     at Function.Module._resolveFilename (module.js:438:15)
+4 verbose stack     at Function.Module._load (module.js:386:25)
+4 verbose stack     at Module.require (module.js:466:17)
+4 verbose stack     at require (internal/module.js:20:19)
+4 verbose stack     at Object.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js:2:22)
+4 verbose stack     at Module._compile (module.js:541:32)
+4 verbose stack     at Object.Module._extensions..js (module.js:550:10)
+4 verbose stack     at Module.load (module.js:456:32)
+4 verbose stack     at tryModuleLoad (module.js:415:12)
+4 verbose stack     at Function.Module._load (module.js:407:3)
+5 verbose cwd /Users/rudolfoborges/development/node/mars-node
+6 error Darwin 15.3.0
+7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "init"
+8 error node v6.1.0
+9 error npm  v3.8.6
+10 error code MODULE_NOT_FOUND
+11 error Cannot find module 'github-url-from-git'
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
