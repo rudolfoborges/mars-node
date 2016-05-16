@@ -18,7 +18,7 @@
         };
 
         this.mover = function () {
-            this.posicao.moverParaFrente(this.direcao);
+            this.posicao.mover(this.direcao);
         };
     };
 
