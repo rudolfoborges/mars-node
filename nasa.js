@@ -3,7 +3,7 @@
 
     let Sonda = require('./sonda');
 
-    var Nasa = function(){
+    let Nasa = function(){
         this.sondas = ['Spirit', 'Opportunity', 'Curiosity', 'Mars Pathfinder', 'Viking', 'ExoMars'];
         this.nLancamento = 0;
     };
