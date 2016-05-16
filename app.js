@@ -1,9 +1,9 @@
 'use strict';
 
-let nasa = require('./nasa');
-let Planalto = require('./planalto');
-let Posicao = require('./posicao');
-let DIRECAO = require('./direcao');
+let nasa = require('./models/nasa');
+let Planalto = require('./models/planalto');
+let Posicao = require('./models/posicao');
+let DIRECAO = require('./models/direcao');
 
 
 let planalto = new Planalto(10, 10);

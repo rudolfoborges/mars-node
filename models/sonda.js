@@ -9,19 +9,27 @@
         this.posicao = undefined;
         this.direcao = undefined;
 
-        this.girarParaEsquerda = function () {
-            this.direcao = DIRECAO[this.direcao.E];
+        let self = this;
+
+       function girarParaEsquerda () {
+            self.direcao = DIRECAO[self.direcao.E];
         };
 
-        this.girarParaDireita = function () {
-            this.direcao = DIRECAO[this.direcao.D];
+        function girarParaDireita () {
+            self.direcao = DIRECAO[self.direcao.D];
         };
 
-        this.mover = function () {
-            var novaPosicao = this.posicao.mover(this.direcao);
-            if(this.planalto.posicaoConhecida(novaPosicao)){
-                this.posicao = novaPosicao;
+        function mover () {
+            var novaPosicao = self.posicao.mover(self.direcao);
+            if(self.planalto.posicaoConhecida(novaPosicao)){
+                self.posicao = novaPosicao;
             }
+        };
+
+        this.acoes = {
+            E: girarParaEsquerda,
+            D: girarParaDireita,
+            M: mover
         };
     };
 
@@ -32,9 +40,9 @@
     };
 
     Sonda.prototype.receberComando = function (comando) {
-        if (comando === 'D') this.girarParaDireita();
-        else if (comando === 'E') this.girarParaEsquerda();
-        else if (comando === 'M') this.mover(comando);
+        if(comando === 'D' || comando == 'E' || comando == 'M'){
+            this.acoes[comando]();
+        }
     };
 
     Sonda.prototype.posicaoAtual = function () {
